@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Conditional Statement Page</title>
+</head>
+<body>
+	
+	<h1>You are inside int the conditional Statement Page </h1>
+	
+	<h2>User is <span  th:style="${isActive} ? 'color:green' : 'color:red' "
+	th:text="${isActive} ? 'ACTIVE' : 'NOT ACTIVE' " ></span> </h2>
+	
+	<h1 th:if="${gender}== 'M' " >Male</h1>
+	<h1 th:unless="${gender} == 'M'" >Female</h1>
+	
+	<div th:switch="${#lists.size(myList)}"  >
+	   
+	   <h1 th:case ="'0'" >List contain 0 element in the list</h1>
+	   <h2 th:case ="'1'">List contain 1 element in the list</h2>
+	   <h1 th:case ="*">List contain more than one element in the list</h1>
+	
+	
+	</div>
+	
+	
+</body>
+</html>
